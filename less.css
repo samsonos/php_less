@@ -1,6 +1,16 @@
 /*
  * Специальные "примиси" для удобства
  */
+ 
+ /* User selection */
+.user_select( @_opacity ) {
+	-webkit-touch-callout: @_opacity;
+	-webkit-user-select: @_opacity;
+	-khtml-user-select: @_opacity;
+	-moz-user-select: @_opacity;
+	-ms-user-select: @_opacity;
+	user-select: @_opacity;
+}
 
 /* Примись для установления кроссбраузерной прозрачности элементам */
 .opacity (@_opacity) {
