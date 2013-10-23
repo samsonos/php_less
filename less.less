@@ -1,7 +1,3 @@
-/*
- * Специальные "примиси" для удобства
- */
- 
 .text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
 	text-shadow: @string;
 }
@@ -102,26 +98,26 @@
 	user-select: @_opacity;
 }
 
-/* Примись для установления кроссбраузерной прозрачности элементам */
-.opacity (@_opacity) {
-    @opacityPercentage = @_opacity * 100;
-    opacity: @_opacity;     
-    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{opacityPercentage})";
-    filter: ~"alpha(opacity = @{opacityPercentage})";    
-}
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+//.opacity (@_opacity) {
+//    @opacityPercentage = @_opacity * 100;
+//    opacity: @_opacity;     
+//    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{opacityPercentage})";
+//    filter: ~"alpha(opacity = @{opacityPercentage})";    
+//}
+//
+///* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+//.grayscale (@_grayscale) {
+//    @grayscale = @_grayscale * 100%;
+//   	filter: grayscale(@grayscale);
+//	-webkit-filter: grayscale(@grayscale);
+//	-moz-filter: grayscale(@grayscale);
+//	-ms-filter: grayscale(@grayscale);
+//	-o-filter: grayscale(@grayscale);   
+//}
 
-/* Примись для наложения фильтра */
-.grayscale (@_grayscale) {
-    @grayscale = @_grayscale * 100%;
-   	filter: grayscale(@grayscale);
-	-webkit-filter: grayscale(@grayscale);
-	-moz-filter: grayscale(@grayscale);
-	-ms-filter: grayscale(@grayscale);
-	-o-filter: grayscale(@grayscale);   
-}
-
-/* Примись установки прозрасного фона элемента */
-.colorize_bg(@color: @white, @alpha: 1) {
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+.colorize_bg(@color: white, @alpha: 1) {
 	background-color: @color;
 	background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
 }
