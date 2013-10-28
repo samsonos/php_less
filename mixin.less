@@ -61,3 +61,9 @@
 	-ms-user-select: @_opacity;
 	user-select: @_opacity;
 }
+
+.transition (@property: all, @duration: 0.2s, @timingfunction: ease-out) {
+	-webkit-transition: @property @duration @timingfunction;
+	-moz-transition: @property @duration @timingfunction;
+	transition: @property @duration @timingfunction;
+}
