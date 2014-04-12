@@ -31,7 +31,7 @@ class SamsonLessConnector extends ExternalModule
 		
 		// If CSS resource has been updated
 		if( isset($rr->updated['css']))	try
-		{			
+		{	
 			$less = new \lessc;
 			
 			// Read updated CSS resource file and compile it
