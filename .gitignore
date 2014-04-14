@@ -1,4 +1,8 @@
-upload/*
+.buildpath
+.project
+.settings*
+.idea/*
 cache/*
-cms/cache/*
-cms/upload/*
+vendor/*
+cms/*
+
