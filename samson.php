@@ -36,6 +36,9 @@ class SamsonLessConnector extends ExternalModule
 			
 			// Read updated CSS resource file and compile it
 			$css = $less->compile( file_get_contents( $rr->updated['css'] ) );
+
+            // Rewrite urls
+            $css = preg_replace_callback( '/url\s*\(\s*(\'|\")?([^\)\s\'\"]+)(\'|\")?\s*\)/i', array( $rr, 'src_replace_callback'), $css );
 			
 			// Write to the same place
 			file_put_contents( $rr->updated['css'], $css );
