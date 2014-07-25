@@ -17,12 +17,6 @@ class SamsonLessConnector extends ExternalModule
 	/** Идентификатор модуля */
 	protected $id = 'less'; 	
 	
-	/** Список модулей от которых завист данный модуль */
-	protected $requirements = array
-	(
-		'resourcer'	
-	);
-	
 	/**	@see ModuleConnector::init() */
 	public function init( array $params = array() )
 	{	
@@ -32,15 +26,17 @@ class SamsonLessConnector extends ExternalModule
 		// If CSS resource has been updated
 		if( isset($rr->updated['css']))	try
 		{	
-			$less = new \lessc;
+			$less = new \lessc;			
+			
+			$file = file_get_contents( $rr->updated['css'] );			
 			
 			// Read updated CSS resource file and compile it
-			$css = $less->compile( file_get_contents( $rr->updated['css'] ) );
-
+			$css = $less->compile($file);
+			
 			// Write to the same place
-			file_put_contents( $rr->updated['css'], $css );
+			file_put_contents($rr->updated['css'], $css );
 		}
-		catch( Exception $e){ e('Ошибка обработки CSS: '.$e->getMessage()); }
+		catch( Exception $e){ trace('Less Erorr'.$e->getMessage()); e('Ошибка обработки CSS: '.$e->getMessage()); }
 		
 		// Вызовем родительский метод
 		parent::init( $params );				
