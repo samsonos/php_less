@@ -4,6 +4,8 @@ namespace samson\less;
 use samson\core\ExternalModule;
 use samson\resourcerouter;
 
+require_once('lessc.php');
+
 /**
  * Интерфейс для подключения модуля в ядро фреймворка SamsonPHP
  *
@@ -17,12 +19,6 @@ class SamsonLessConnector extends ExternalModule
 	/** Идентификатор модуля */
 	protected $id = 'less'; 	
 	
-	/** Список модулей от которых завист данный модуль */
-	protected $requirements = array
-	(
-		'resourcer'	
-	);
-	
 	/**	@see ModuleConnector::init() */
 	public function init( array $params = array() )
 	{	
@@ -30,8 +26,7 @@ class SamsonLessConnector extends ExternalModule
 		$rr = m('resourcer');
 		
 		// If CSS resource has been updated
-		if( isset($rr->updated['css']))	try
-		{	
+		if(isset($rr->updated['css']))	try {	
 			$less = new \lessc;
 			
 			// Read updated CSS resource file and compile it
