@@ -68,6 +68,12 @@
 	transition: @property @duration @timingfunction;
 }
 
+.transforn (@property) {
+	-webkit-transform: @property;
+	-moz-transform: @property;
+	transform: @property;
+}
+
 .horizontal_gradient(@startColor: #555, @endColor: #333) {
   background-color: @endColor;
   background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
