@@ -18,7 +18,7 @@ This module has next built-in mixins:
 * .horizontal_gradient(@startColor: #555, @endColor: #333)
 * .vertical_gradient(@startColor: #555, @endColor: #333) 
 
-### Media query mixins
+## Media query mixins
 * @highdensity
 * @mobile      
 * @tablet
