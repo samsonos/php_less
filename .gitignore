@@ -1,8 +1,7 @@
-.buildpath
-.project
-.settings*
-.idea/*
-cache/*
+.idea*
 vendor/*
-cms/*
-
+upload/*
+www/cache/*
+www/upload/*
+composer.lock
+composer.phar
