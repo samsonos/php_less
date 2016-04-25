@@ -27,5 +27,8 @@
     "psr-4": {
       "samsonphp\\less\\": "src/"
     }
+  },
+  "extra": {
+    "samson_module_include": "1"
   }
 }

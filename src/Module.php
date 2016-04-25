@@ -1,7 +1,7 @@
 <?php
 namespace samsonphp\less;
 
-use samson\core\ExternalModule;
+use samsonframework\core\PreparableInterface;
 use samson\resourcer\ResourceRouter;
 use samsonphp\event\Event;
 
@@ -11,9 +11,9 @@ use samsonphp\event\Event;
  * @author Vitaly Iegorov <egorov@samsonos.com>
  * @author Nikita Kotenko <kotenko@samsonos.com>
  */
-class Module extends ExternalModule
+class Module implements PreparableInterface
 {
-    /** SamsonPHP Module preparation stage handler */
+    /** SamsonFramework load preparation stage handler */
     public function prepare()
     {
         Event::subscribe(ResourceRouter::EVENT_CREATED, array($this, 'renderer'));
