@@ -4,6 +4,7 @@
   "minimum-stability": "dev",
   "require": {
     "leafo/lessphp": "*",
+    "samsonphp/event": "*",
     "samsonos/php_resourcer": "*"
   },
   "license": "Open Software License (OSL) v 3.0",

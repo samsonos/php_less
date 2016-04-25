@@ -1,5 +1,5 @@
 <?php
-namespace samson\less;
+namespace samsonphp\less;
 
 use samson\core\ExternalModule;
 use samson\resourcer\ResourceRouter;
@@ -11,7 +11,7 @@ use samsonphp\event\Event;
  * @author Vitaly Iegorov <egorov@samsonos.com>
  * @author Nikita Kotenko <kotenko@samsonos.com>
  */
-class LESSModule extends ExternalModule
+class Module extends ExternalModule
 {
     /** SamsonPHP Module preparation stage handler */
     public function prepare()
