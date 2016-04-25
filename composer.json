@@ -3,7 +3,7 @@
   "author": "Vitaly Iegorov <egorov@samsonos.com>",
   "minimum-stability": "dev",
   "require": {
-    "samsonphp/event": "~1.*",
+    "samsonphp/event": "1.*",
     "samsonos/php_resourcer": "*",
     "leafo/lessphp": "*"
   },
