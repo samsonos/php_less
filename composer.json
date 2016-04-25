@@ -1,5 +1,5 @@
 {
-  "name": "samsonos/php_less",
+  "name": "samsonphp/less",
   "author": "Vitaly Iegorov <egorov@samsonos.com>",
   "minimum-stability": "dev",
   "require": {
