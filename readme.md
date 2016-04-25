@@ -2,7 +2,9 @@
  
 SamsonPHP LESS compiler implementation for adding automatic LESS to CSS conversion.
 
-> Module is based on [SamsonPHP Resourcer module](https://github.com/samsonphp/resourcer)
+> Module logic is based on [SamsonPHP Resourcer module](https://github.com/samsonphp/resourcer)
+
+LESS compiling is based on [leafo/lessphp](https://github.com/leafo/lessphp) package.
 
 [![Latest Stable Version](https://poser.pugx.org/samsonphp/less/v/stable.svg)](https://packagist.org/packages/samsonphp/less)
 [![Build Status](https://scrutinizer-ci.com/g/samsonphp/less/badges/build.png?b=master)](https://scrutinizer-ci.com/g/samsonphp/less/build-status/master)
