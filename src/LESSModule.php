@@ -5,17 +5,15 @@ use samson\core\ExternalModule;
 use samson\resourcer\ResourceRouter;
 use samsonphp\event\Event;
 
-require_once('lessc.php');
-
 /**
- * Интерфейс для подключения модуля в ядро фреймворка SamsonPHP
+ * SamsonPHP LESS compiler module.
  *
- * @package SamsonPHP
- * @author Vitaly Iegorov <vitalyiegorov@gmail.com>
- * @author Nikita Kotenko <nick.w2r@gmail.com>
+ * @author Vitaly Iegorov <egorov@samsonos.com>
+ * @author Nikita Kotenko <kotenko@samsonos.com>
  */
-class SamsonLessConnector extends ExternalModule
+class LESSModule extends ExternalModule
 {
+    /** SamsonPHP Module preparation stage handler */
     public function prepare()
     {
         Event::subscribe(ResourceRouter::EVENT_CREATED, array($this, 'renderer'));

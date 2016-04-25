@@ -7,8 +7,9 @@
   "license": "Open Software License (OSL) v 3.0",
   "homepage": "http://samsonos.com/",
   "require": {
-    "leafo/lessphp": "*"
-  }
+    "leafo/lessphp": "*",
+    "samsonos/php_resourcer": "*"
+  },
   "config": {
     "github-protocols": [
       "https"
