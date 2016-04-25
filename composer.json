@@ -1,15 +1,13 @@
 {
   "name": "samsonos/php_less",
   "author": "Vitaly Iegorov <egorov@samsonos.com>",
-  "require": {
-    "samsonos/php_resourcer": "*"
-  },
-  "license": "Open Software License (OSL) v 3.0",
-  "homepage": "http://samsonos.com/",
+  "minimum-stability": "dev",
   "require": {
     "leafo/lessphp": "*",
     "samsonos/php_resourcer": "*"
   },
+  "license": "Open Software License (OSL) v 3.0",
+  "homepage": "http://samsonos.com/",
   "config": {
     "github-protocols": [
       "https"
