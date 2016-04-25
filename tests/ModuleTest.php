@@ -39,8 +39,30 @@ LESS;
 
 CSS;
 
-        $module->renderer('css', $content);
+        $module->renderer('css', $content, 'test');
 
         $this->assertEquals($equals, $content);
+    }
+
+    public function testException()
+    {
+        $this->setExpectedException('\Exception');
+        $module = new Module();
+
+        $module->prepare();
+
+        $content = <<<'LESS'
+.parentClass {
+    color:green; !important;
+    &.blue {
+    color:blue;
+    }
+    .nestedClass{
+        border:1px solid;
+    }
+}
+LESS;
+
+        $module->renderer('css', $content, 'test');
     }
 }

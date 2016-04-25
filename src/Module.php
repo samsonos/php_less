@@ -36,7 +36,7 @@ class Module implements LoadableInterface
      *
      * @throws \Exception
      */
-    public function renderer($type, &$content, $file)
+    public function renderer($type, &$content, $file = '')
     {
         // If CSS resource has been updated
         if ($type === 'css') {
@@ -44,9 +44,9 @@ class Module implements LoadableInterface
                 // Read updated CSS resource file and compile it
                 $content = $this->less->compile($content);
             } catch (\Exception $e) {
-                $errorFile = 'cache/error_resourcer'.microtime(true).'.less';
-                file_put_contents($errorFile, $content);
-                throw new \Exception('Failed compiling LESS['.$errorFile.']:'."\n".$e->getMessage());
+                //$errorFile = 'cache/error_resourcer'.microtime(true).'.less';
+                //file_put_contents($errorFile, $content);
+                throw new \Exception('Failed compiling LESS['.$file.']:'."\n".$e->getMessage());
             }
         }
     }
