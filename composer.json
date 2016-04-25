@@ -7,6 +7,9 @@
     "samsonphp/event": "*",
     "samsonos/php_resourcer": "*"
   },
+  "require-dev": {
+    "phpunit/phpunit": "4.*"
+  },
   "license": "Open Software License (OSL) v 3.0",
   "homepage": "http://samsonos.com/",
   "config": {
@@ -14,8 +17,6 @@
       "https"
     ]
   },
-  "license": "Open Software License (OSL) v 3.0",
-  "homepage": "http://samsonos.com/",
   "autoload": {
     "classmap": [
       "src/"
