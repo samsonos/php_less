@@ -1,7 +1,7 @@
 <?php
 namespace samsonphp\less;
 
-use samsonframework\core\PreparableInterface;
+use samsonframework\core\LoadableInterface;
 use samson\resourcer\ResourceRouter;
 use samsonphp\event\Event;
 
@@ -11,7 +11,7 @@ use samsonphp\event\Event;
  * @author Vitaly Iegorov <egorov@samsonos.com>
  * @author Nikita Kotenko <kotenko@samsonos.com>
  */
-class Module implements PreparableInterface
+class Module implements LoadableInterface
 {
     /** SamsonFramework load preparation stage handler */
     public function prepare()
