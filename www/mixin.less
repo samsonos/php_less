@@ -53,13 +53,13 @@
 	background-clip:         padding-box;
 }
 
-.user_select( @_opacity ) {
-	-webkit-touch-callout: @_opacity;
-	-webkit-user-select: @_opacity;
-	-khtml-user-select: @_opacity;
-	-moz-user-select: @_opacity;
-	-ms-user-select: @_opacity;
-	user-select: @_opacity;
+.user_select( @_value ) {
+	-webkit-touch-callout: @_value;
+	-webkit-user-select: @_value;
+	-khtml-user-select: @_value;
+	-moz-user-select: @_value;
+	-ms-user-select: @_value;
+	user-select: @_value;
 }
 
 .transition (@property: all, @duration: 0.2s, @timingfunction: ease-out) {
@@ -68,7 +68,7 @@
 	transition: @property @duration @timingfunction;
 }
 
-.transforn (@property) {
+.transform (@property) {
 	-webkit-transform: @property;
 	-moz-transform: @property;
 	transform: @property;
