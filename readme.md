@@ -15,7 +15,7 @@ LESS compiling is based on [leafo/lessphp](https://github.com/leafo/lessphp) pac
 [![Stories in Ready](https://badge.waffle.io/samsonphp/less.png?label=ready&title=Ready)](https://waffle.io/samsonphp/less)
  
 ##Documentation
-Follow [official documentation](htgtp://github.com/samsonphp/less/blob/master/docs/Index.md).
+Follow [official documentation](http://github.com/samsonphp/less/blob/master/docs/Index.md).
  
 ##Installation
 You can install this package through Composer:
