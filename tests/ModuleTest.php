@@ -15,6 +15,32 @@ class ModuleTest extends \PHPUnit_Framework_TestCase
 
         $module->prepare();
 
-        $module->renderer('css', '.class {}');
+        $content = <<<'LESS'
+.parentClass {
+    color:green;
+    &.blue {
+    color:blue;
+    }
+    .nestedClass{
+        border:1px solid;
+    }
+}
+LESS;
+        $equals = <<<'CSS'
+.parentClass {
+  color: green;
+}
+.parentClass.blue {
+  color: blue;
+}
+.parentClass .nestedClass {
+  border: 1px solid;
+}
+
+CSS;
+
+        $module->renderer('css', $content);
+
+        $this->assertEquals($equals, $content);
     }
 }

@@ -1,8 +1,8 @@
 <?php
 namespace samsonphp\less;
 
-use samsonframework\core\LoadableInterface;
 use samson\resourcer\ResourceRouter;
+use samsonframework\core\LoadableInterface;
 use samsonphp\event\Event;
 
 /**
@@ -18,7 +18,7 @@ class Module implements LoadableInterface
     {
         Event::subscribe(ResourceRouter::EVENT_CREATED, array($this, 'renderer'));
 
-        return parent::prepare();
+        return true;
     }
 
     /**
