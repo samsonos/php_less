@@ -5,15 +5,29 @@
  */
 namespace samsonphp\less\tests;
 
+use samson\core\Core;
+use samsonframework\resource\ResourceMap;
 use samsonphp\less\Module;
+
+// Include framework constants
+require('vendor/samsonos/php_core/src/constants.php');
+require('vendor/samsonos/php_core/src/Utils2.php');
 
 class ModuleTest extends \PHPUnit_Framework_TestCase
 {
+    /** @var Module */
+    protected $module;
+
+    public function setUp()
+    {
+        $map = new ResourceMap(__DIR__);
+        $core = new Core($map);
+        $this->module = new Module(__DIR__, $map, $core);
+    }
+
     public function testGenerator()
     {
-        $module = new Module();
-
-        $module->prepare();
+        $this->module->prepare();
 
         $content = <<<'LESS'
 .parentClass {
@@ -39,7 +53,7 @@ LESS;
 
 CSS;
 
-        $module->renderer('css', $content, 'test');
+        $this->module->renderer('css', $content, 'test');
 
         $this->assertEquals($equals, $content);
     }
@@ -47,9 +61,8 @@ CSS;
     public function testException()
     {
         $this->setExpectedException('\Exception');
-        $module = new Module();
 
-        $module->prepare();
+        $this->module->prepare();
 
         $content = <<<'LESS'
 .parentClass {
@@ -63,6 +76,6 @@ CSS;
 }
 LESS;
 
-        $module->renderer('css', $content, 'test');
+        $this->module->renderer('css', $content, 'test');
     }
 }
