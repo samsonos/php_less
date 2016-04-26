@@ -1,10 +1,9 @@
 <?php
 namespace samsonphp\less;
 
+use samson\core\ExternalModule;
 use samson\resourcer\ResourceRouter;
-use samsonframework\core\LoadableInterface;
 use samsonphp\event\Event;
-use Symfony\Component\Config\Definition\Exception\Exception;
 
 /**
  * SamsonPHP LESS compiler module.
@@ -12,7 +11,7 @@ use Symfony\Component\Config\Definition\Exception\Exception;
  * @author Vitaly Iegorov <egorov@samsonos.com>
  * @author Nikita Kotenko <kotenko@samsonos.com>
  */
-class Module implements LoadableInterface
+class Module extends ExternalModule
 {
     /** @var \lessc LESS compiler */
     protected $less;

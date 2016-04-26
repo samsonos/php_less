@@ -4,6 +4,7 @@
   "minimum-stability": "dev",
   "require": {
     "samsonphp/event": "1.*",
+    "samsonos/php_core": "*",
     "samsonos/php_resourcer": "*",
     "leafo/lessphp": "*"
   },
